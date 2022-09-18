@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.forkexec.hub.ws.it.SearchFoodsIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 3.109 sec <<< FAILURE! - in com.forkexec.hub.ws.it.SearchFoodsIT
+searchDeal(com.forkexec.hub.ws.it.SearchFoodsIT)  Time elapsed: 1.107 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+searchDeal(com.forkexec.hub.ws.it.SearchFoodsIT)  Time elapsed: 1.107 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+searchHungry(com.forkexec.hub.ws.it.SearchFoodsIT)  Time elapsed: 1.137 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+searchHungry(com.forkexec.hub.ws.it.SearchFoodsIT)  Time elapsed: 1.137 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+com.forkexec.hub.ws.it.SearchFoodsIT  Time elapsed: 1.675 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() ServerSOAPFaultException Client received SOAP Fault from server: The business entity was not found for the given key:  uddi:juddi.apache.org:ffe2faae-8e51-4988-8823-76626ddb6a91 Please see the server log to find more detail regarding exact cause of the failure. ; org.apache.ws.scout.transport.TransportException: java.lang.reflect.InvocationTargetException Please see the server log to find more detail regarding exact cause of the failure.
+

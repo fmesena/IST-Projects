@@ -1,0 +1,6 @@
+com\forkexec\pts\ws\it\AddPointsIT.class
+com\forkexec\pts\ws\it\BaseIT.class
+com\forkexec\pts\ws\it\SpendPointsIT.class
+com\forkexec\pts\ws\it\ActivateUserIT.class
+com\forkexec\pts\ws\it\PingIT.class
+com\forkexec\pts\ws\it\PointsBalanceIT.class

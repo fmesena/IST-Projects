@@ -1,0 +1,986 @@
+.time_unlock{
+	position: absolute;
+	font-family: "Arial";
+	color: white;
+	text-align: center;
+	margin-left: 42.5px;
+	margin-top: 5px;
+	display: block;
+	z-index: 2;
+}
+.time_lock{
+	margin-top: 48px;
+	text-align: center;
+	font-family: "Arial";
+	font-size: 35px;
+	color: #FFFAFA;
+	margin-right: 3px;
+	cursor: pointer;
+}
+.raveStarting{
+	border-style:solid;
+	border-width:9px;
+	border-color: silver;
+	border-radius: 25px;
+	height: 1.35in;
+	width: 1.30in;
+	position: relative;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	background-color: black;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 1;
+}
+
+.raveUnlocked{
+	border-style:solid;
+	border-width:9px;
+	border-color: silver;
+	border-radius: 25px;
+	height: 1.35in;
+	width: 1.30in;
+	position: relative;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	overflow: hidden;
+	z-index: 1;
+}
+
+.raveButtons{
+	position: relative;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	z-index: 0;
+}
+
+.raveLocked{
+	border-style:solid;
+	border-width:9px;
+	border-color: silver;
+	border-radius: 25px;
+	height: 1.35in;
+	width: 1.30in;
+	position: relative;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	background-color: black;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 1;
+}
+
+.raveUnlocking{
+	border-style:solid;
+	border-width:9px;
+	border-color: silver;
+	border-radius: 25px;
+	height: 1.35in;
+	width: 1.30in;
+	position: relative;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	z-index: 1;
+	background-color: black;
+}
+
+.prev{
+  cursor: pointer;
+  top: 36%;
+  position: absolute;
+  width: auto;
+  color: silver;
+  font-size: 25px;
+  transition: 0.6s ease;
+  display: block;
+  z-index: 1;
+}
+
+.next{
+  cursor: pointer;
+  top: 36%;
+  position: absolute;
+  width: auto;
+  margin-left: 89%;
+  color: silver;
+  font-size: 25px;
+  transition: 0.6s ease;
+  display: block;
+  z-index: 1;
+}
+
+.menu-description{
+	font-size: 105%;
+	color: white;
+	font-family: "Arial";
+	font-weight: lighter;
+	margin-bottom: 3px;
+}
+
+.menu{
+	display: none;
+	text-align: center;
+}
+.submenu{
+	text-align: center;
+	border-collapse: separate;
+}
+.menuImagem{
+	width: 68px;
+	height: 63px;
+	margin: 25px 3px -15px 5px;
+	cursor: pointer;
+}
+
+#MENUS{
+	display: none;
+}
+
+#social-img{
+	cursor: pointer;
+	width: 68px;
+	height: 68px;
+	margin: 28px 3px 4px 5px;
+}
+
+#concertos-img{
+	cursor: pointer;
+	margin: 30px 9px 5px 3px;
+	width: 70px;
+	height: 64px;
+}
+
+#comida-img{
+	cursor: pointer;
+	margin: 25px 0px 4px auto;
+	width: 70px;
+	height: 70px;
+}
+
+#definicoes-img{
+	cursor: pointer;
+	margin: 25px 0px 4px 4px;
+	width: 70px;
+	height: 70px;
+}
+
+#medidores-img{
+	cursor: pointer;
+	margin: 25px 0px 4px 2px;
+	width: 70px;
+	height: 70px;
+}
+
+#mapa-img{
+	cursor: pointer;
+	margin: 26px 4px 0px 5px;
+	width: 75px;
+	height: 75px;
+}
+
+#titulo{
+    display: block;
+    color: white;
+    font-size: 220%;
+    font-family: "Trebuchet MS";
+	text-align: center;
+	margin-top: 30%;
+}
+#block_img{
+	height: 1.35in;
+	width: 1.30in;
+	border-radius: 15px;
+}
+#blocked_screen{
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+}
+
+/************************ SOCIAL ************************/
+.scroll_content {
+    position: relative;
+    width: 400px;
+    height: 414px;
+    top: -17px;
+    padding: 20px 10px 20px 10px;
+    overflow-y: auto;
+}
+
+
+.socialIcons{
+	position: relative;
+	display: block;
+	border-style: none;
+	background: #98cdbb;
+	border-width:thin;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.table_social{
+	margin-left: 6px;
+	border-spacing: 10px;
+	margin-top: 16px;
+}
+
+#localizar{
+	width: 40px;
+}
+
+#message{
+	width: 40px;
+}
+
+#adicionar{
+	width: 40px;
+}
+
+#remover{
+	width: 40px;
+}
+
+#toAddFriend {
+	display: none;
+}
+
+#friendName {
+	color: #98FB98;
+	font-family: Arial;
+	text-align: center;
+	font-size: 19px;
+	margin-top: 30px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+#friendAdded {
+	color: #E6E6E6;
+	font-family: Arial;
+	text-align: center;
+	font-size: 17px;
+	margin-top: -17px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+#addFriendText {
+	color: #E6E6E6;
+	font-family: Arial;
+	text-align: center;
+	font-size: 17px;
+	margin-top: 30px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+
+/************************ MEDIDORES ************************/
+
+.medsIcons{
+	position: relative;
+	display: block;
+	border-style: none;
+	background: cadetblue;
+	border-width:thin;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.table_meds{
+	margin-left: 6px;
+	border-spacing: 10px;
+	margin-top: 16px;
+}
+
+#ritmocard{
+	width: 40px;
+}
+#glicemia{
+	width: 40px;
+}
+#alcool{
+	width: 40px;
+}
+#bloodpressure {
+	width: 40px;
+}
+
+.tabela_valores{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -14px;
+}
+.tabela_pressure{
+	border-spacing: 0px;
+}
+
+.results{
+	color: white;
+	font-family: Arial;
+	text-align: center;
+}
+.results_pressure{
+	color: white;
+	font-family: Arial;
+	font-size: 12px;
+}
+.danger{
+	width: 40px;
+	margin-left: 41px;
+}
+
+#titulo_heart{
+	font-size: 16px;
+	margin-left: 1px;
+	margin-top: -15px;
+}
+
+#BPM{
+	font-size: 40px;
+}
+
+#titulo_glicemia{
+	font-size: 16px;
+	margin-left: 1px;
+	margin-top: 14px;
+}
+
+#mg_dl{
+	font-size: 40px;
+}
+
+#titulo_alcohol{
+	font-size: 16px;
+	margin-left: 1px;
+	margin-top: -15px;
+}
+
+#g_l{
+	font-size: 40px;
+}
+
+#titulo_bloodpressure{
+	font-size: 16px;
+	margin-left: 1px;
+	margin-top: -15px;
+	border-spacing: 1px;
+}
+
+#bp1{
+	font-size: 23px;
+}
+
+#bp2{
+	font-size: 23px;
+}
+
+/************************ RESTAURACAO ************************/
+
+#SubMenuFood{
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 7px;
+}
+
+.rest_imgs{
+	position: relative;
+	display: block;
+	background: #E2E27A;
+	border-style: none;
+	border-width:thin;
+	border-radius: 10px;
+	cursor: pointer;
+	border-color: silver;
+}
+#bebidas_img{
+	width: 50px;
+	height: 50px;
+}
+#comidas_img{
+	height: 50px;
+	width: 50px;
+}
+
+.ok_button{
+	display: block;
+	border-style: solid;
+	border-radius: 15px;
+	background: #6c9dd1;
+	border-color: #6c9dd1;
+	color: black;
+	cursor: pointer;
+	text-align: center;
+	margin-top: -9px;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-bottom: 2px;
+	font-family: Arial;
+}
+
+.cancelButton {
+	-moz-box-shadow:inset 0px 39px 0px -24px #f05a52;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #f05a52;
+	box-shadow:inset 0px 39px 0px -24px #f05a52;
+	background-color:#f02213;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius: 9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:8px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+	width: 15px;
+	height: 15px;
+}
+.cancelButton:hover {
+	background-color:#f5150a;
+}
+.cancelButton:active {
+	position:relative;
+	top:1px;
+}
+
+.shoppingCart{
+	-moz-box-shadow:inset 0px 39px 0px -24px #f05a52;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #3dc21b;
+	box-shadow:inset 0px 39px 0px -24px #3dc21b;
+	background-color:#1ba841;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius: 9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:8px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	width: 15px;
+	height: 15px;
+}
+.shoppingCart:hover {
+	background-color:#5cbf2a;
+}
+.shoppingCart:active {
+	position:relative;
+	top:1px;
+}
+#tabela_drinks{
+	border-collapse: collapse;
+}
+.images{
+	background: white;
+	border-right: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	text-align: center;
+	border-color: black;
+	width: 21%;
+}
+.name{
+	font-size: 14px;
+}
+
+.price{
+	background:white;
+	border-left: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: black;
+	width: 0%;
+	font-size: 13px;
+}
+.floatPrices{
+	font-size: 11px;
+}
+
+.produtos{
+	width: 18px;
+	height: 17px;
+}
+
+.tabela_order{
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 5px;
+	margin-top: 5px;
+}
+
+.quantityButtons{
+	width: 30px;
+	cursor: pointer;
+}
+.minus{
+	display: none;
+	position: fixed;
+	margin-top: 13px;
+	margin-left: 9px;
+}
+.plus{
+	margin-left: 87px;
+	margin-top: -31px;
+	position: fixed;
+}
+
+.produto{
+	color: white;
+	font-family: Arial;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 31px;
+	margin-bottom: 0px;
+}
+
+.quantidade{
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px;
+	background: white;
+	width: 31px;
+	height: 27px;
+	text-align: center;
+	font-size: 21px;
+	margin-left: 47px;
+	margin-top: 12px;
+	padding-top: 2px;
+}
+
+.cart{
+	display: block;
+	margin-top: 42px;
+}
+
+
+.prodCart{
+	font-size: 14px;
+	text-align: center;
+	width: 37px;
+}
+
+.nomeCart{
+	width: 45%;
+}
+
+.quantCart{
+	width: 0%;
+}
+.preçoCart{
+	width: 45%;
+}
+
+#table_total_d{
+	display: none;
+	margin-top: 7px;
+	margin-left: 2px;
+	margin-bottom: 7px;
+	border-collapse: collapse;
+}
+
+#table_total_f{
+	display: none;
+	margin-top: 7px;
+	margin-left: 2px;
+	margin-bottom: 7px;
+	border-collapse: collapse;
+}
+
+.total{
+	font-family: Arial;
+	color: black;
+	text-align: center;
+	background: antiquewhite;
+	padding: 2px 2px;
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 5px;
+	width: 50%;
+}
+
+.checkPurchase{
+	margin-left: 75px;
+	margin-top:  5px;
+	position: fixed;
+	cursor: pointer;
+}
+.restartPurchase{
+	margin-left: 13px;
+	margin-top: 5px;
+	cursor: pointer;
+	position: fixed;
+}
+
+
+.offer{
+	font-family: Arial;
+	font-size: 17px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	z-index: 0;
+}
+
+.overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+.overlay_pop_up{
+	background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    width: 124px;
+    height: 129px;
+    top: 35.4%;
+    left: 42.5%;
+    border-radius: 15px;
+}
+
+#pedido_efetuado{
+	border-style: solid;
+	border-color: white;
+	border-radius: 10px;
+	background-color: #e7d18d;
+	color: black;
+	font-size: 15px;
+	font-family: Arial;
+	text-align: center;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	position: absolute;
+	margin-left: 16px;
+	margin-top: 60px;
+	width: 107px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+#pedido_efetuadoOffer{
+	border-style: solid;
+	border-color: white;
+	border-radius: 10px;
+	background-color: #e7d18d;
+	color: black;
+	font-size: 15px;
+	font-family: Arial;
+	text-align: center;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	position: absolute;
+	margin-left: 16px;
+	margin-top: 60px;
+	width: 107px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+#pedido_efetuado_pop{
+	border-style: solid;
+	border-color: white;
+	border-radius: 10px;
+	background-color: #e7d18d;
+	color: black;
+	font-size: 15px;
+	font-family: Arial;
+	text-align: center;
+	top: calc(50% - 1.30in);
+	left: calc(50% - 1.30in);
+	position: absolute;
+	margin-left: 68px;
+	margin-top: 75px;
+	width: 107px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+.cancelButtons{
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	background-color: #FFFF99;
+	color: black;
+	cursor: pointer;
+	text-align: center;
+	padding: 4px 4px 4px 4px;
+	border-radius: 10px;
+	font-size: 20px;
+	width: 34px;
+	font-family: Arial;
+}
+
+.definicoes{
+	font-family: Arial;
+	color: 	white;
+}
+.switches{
+	width: 47px;
+	height: 45px;
+	cursor: pointer;
+}
+.colorPicker{
+	border-color: white;
+	border-style: solid;
+	border-width: 0.7px;
+	width: 6%;
+	height: 23px;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+
+
+
+/************************ BOTOES ************************/
+
+
+#lock_b{
+	position: relative;
+	top: -130px;
+	right: -140px;
+}
+
+#back_b {
+	position: relative;
+	top: -159px;
+	right: -49px;
+}
+
+.button{
+	border-width: thin;
+	background: rgb(204, 204, 204);
+	border-radius: 15px;
+	cursor: pointer;
+}
+.back{
+	width: 45px;
+	height: 13px;
+	background-color: grey;
+	border-radius: 4px;
+	border-color:silver;
+}
+.buttonON{
+	width: 16px;
+	height: 25px;
+	background-color: grey;
+	border-radius: 4px;
+	border-color:silver;
+	display: block;
+}
+.button4{
+}
+
+/*==================================================================
+[ Ver1 ]*/
+
+.table100.ver1 th {
+  font-family: Lato-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.4;
+
+  background-color: #6c7ae0;
+}
+
+.table100.ver1 td {
+  font-family: Lato-Regular;
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.table100.ver1 .table100-body tr:nth-child(even) {
+  background-color: #f8f6ff;
+}
+
+/*---------------------------------------------*/
+
+.table100.ver1 {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.table100.ver1 .ps__rail-y {
+  right: 5px;
+}
+
+.table100.ver1 .ps__rail-y::before {
+  background-color: #ebebeb;
+}
+
+.table100.ver1 .ps__rail-y .ps__thumb-y::before {
+  background-color: #cccccc;
+}
+
+
+
+
+/*==================================================================
+[ Ver5 ]*/
+.table100.ver5 {
+}
+
+.table100.ver5 .table100-head {
+}
+
+.table100.ver5 th {
+  font-family: Arial;
+  font-size: 10px;
+  color: beige;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: lightseagreen;
+  padding-top: 7px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+}
+
+.table100.ver5 td {
+  font-family: Arial;
+  color: #141414;
+  line-height: 1.4;
+  background-color: #e7d18d;
+}
+
+.table100.ver5 .table100-body tr {
+  overflow: hidden;
+  border-bottom: 10px solid #fff;
+  border-radius: 10px;
+}
+
+.table100.ver5 .table100-body table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-left: 5px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  margin-right: 3px;
+}
+.table100.ver5 .table100-body td {
+    border: solid 1px #FFFAFA;
+    border-style: solid none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+}
+.table100.ver5 .table100-body td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.table100.ver5 .table100-body td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.table100.ver5 tr:hover td {
+  cursor: pointer;
+}
+
+.table100.ver5 .table100-head th {
+  padding-top: 7px;
+  padding-bottom: 6px;
+  border: solid 1px transparent;
+  border-style: solid none;
+  border-radius: 10px;
+}
+
+/*---------------------------------------------*/
+
+.table100.ver5 {
+  overflow: hidden;
+}
+
+.table100.ver5 .table100-body{
+}
+
+
+.animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.animate-input{transition:width 0.4s ease-in-out}.w3-animate-input:focus{width:100%!important}
+
+
+
+#target{
+  position: absolute;
+  top: 0px;
+  left:0px;
+  z-index: 10;
+  visibility: hidden;
+}
+
+
+#overlay_map {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+.img2 {
+  border: 1px solid #0f0;
+  position: relative;
+  z-index: 1;
+  top: -12px;
+  left: 12px;
+}
+
+
+.position_overlay {
+top: calc(50% - 1.30in);
+left: calc(50% - 1.30in);
+position:absolute;
+margin-left:1.7%;
+margin-top:3%;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 10px;
+}

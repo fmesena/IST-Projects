@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.forkexec.hub.ws.it.CartIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 3.163 sec <<< FAILURE! - in com.forkexec.hub.ws.it.CartIT
+clearCartContent(com.forkexec.hub.ws.it.CartIT)  Time elapsed: 1.161 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+clearCartContent(com.forkexec.hub.ws.it.CartIT)  Time elapsed: 1.161 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+listCartContent(com.forkexec.hub.ws.it.CartIT)  Time elapsed: 1.021 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+listCartContent(com.forkexec.hub.ws.it.CartIT)  Time elapsed: 1.021 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+com.forkexec.hub.ws.it.CartIT  Time elapsed: 1.63 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+

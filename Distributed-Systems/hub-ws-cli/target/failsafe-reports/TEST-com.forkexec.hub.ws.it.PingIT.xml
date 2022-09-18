@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.forkexec.hub.ws.it.PingIT" time="2.184" tests="3" errors="3" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Utilizador\Desktop\projSD\A51-ForkExec\hub-ws-cli"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="PT"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Utilizador\Desktop\projSD\A51-ForkExec\hub-ws-cli"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\UTILIZ~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Java\jdk1.8.0_202\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Java\jdk1.8.0_202\bin;C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\Users\Utilizador\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.5\bin;;."/>
+    <property name="maven.conf" value="C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Utilizador"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Utilizador"/>
+    <property name="java.class.path" value="C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Java\jdk1.8.0_202\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher verify"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="pt"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="java.ext.dirs" value="C:\Java\jdk1.8.0_202\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="pingEmptyTest" classname="com.forkexec.hub.ws.it.PingIT" time="1.089">
+    <error message="Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure." type="com.sun.xml.ws.fault.ServerSOAPFaultException">com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+</error>
+    <system-out><![CDATA[Loaded test properties:
+{verbose.enabled=true, ws.name=A51_Hub, uddi.enabled=true, uddi.url=http://a51:aoJbiEHg@uddi.sd.rnl.tecnico.ulisboa.pt:9090/, ws.url=http://localhost:8080/hub-ws/endpoint}
+]]></system-out>
+  </testcase>
+  <testcase name="pingEmptyTest" classname="com.forkexec.hub.ws.it.PingIT" time="1.089">
+    <error message="Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure." type="com.sun.xml.ws.fault.ServerSOAPFaultException">com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+</error>
+  </testcase>
+  <testcase name="com.forkexec.hub.ws.it.PingIT" classname="com.forkexec.hub.ws.it.PingIT" time="1.818">
+    <error message="Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure." type="com.sun.xml.ws.fault.ServerSOAPFaultException">com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+</error>
+  </testcase>
+</testsuite>

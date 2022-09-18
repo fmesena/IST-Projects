@@ -1,0 +1,6 @@
+com\forkexec\rst\ws\it\BaseIT.class
+com\forkexec\rst\ws\it\OrderMenuIT.class
+com\forkexec\rst\ws\it\InitIT.class
+com\forkexec\rst\ws\it\GetMenuIT.class
+com\forkexec\rst\ws\it\PingIT.class
+com\forkexec\rst\ws\it\SearchMenusIT.class

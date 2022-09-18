@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 93.153 sec <<< FAILURE! - in pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT
+testRebindLookup(pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT)  Time elapsed: 19.869 sec  <<< ERROR!
+pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookup(UDDINamingIT.java:67)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookup(UDDINamingIT.java:67)
+
+testRebindLookupWithWildcard(pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT)  Time elapsed: 22.495 sec  <<< ERROR!
+pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupWithWildcard(UDDINamingIT.java:79)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupWithWildcard(UDDINamingIT.java:79)
+
+testRebindListRecordsWithWildcard(pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT)  Time elapsed: 28.722 sec  <<< ERROR!
+pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindListRecordsWithWildcard(UDDINamingIT.java:118)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindListRecordsWithWildcard(UDDINamingIT.java:118)
+
+testRebindLookupRecord(pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT)  Time elapsed: 22.01 sec  <<< ERROR!
+pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupRecord(UDDINamingIT.java:92)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupRecord(UDDINamingIT.java:92)
+

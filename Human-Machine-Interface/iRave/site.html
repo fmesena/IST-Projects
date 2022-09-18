@@ -1,0 +1,563 @@
+<html>
+
+<head>
+	<title> iRave </title>
+	<link rel="stylesheet" href="proj.css">
+	<script src="dragscrollYONLY.js"></script>
+	<script src="dragscroll.js"></script>
+	<script src="irave.js"></script>
+	<script src="iRaveMap.js"></script>
+</head>
+
+<body onload = "iniciar()" style="overflow: hidden;">
+
+<div id = "rave" class = "raveStarting">
+	<div id= "titulo">iRave</div>
+</div>
+<div id = "blocked" class="raveLocked" style="display: none;"></div>
+<div id="unblocked" class= "raveUnlocking" style="display:none;">
+	<p id="time" class = "time_lock" onclick="easyUnlock()"></p>
+</div>
+<div id="overlay_pop_up" class="overlay_pop_up animate-opacity" onclick="back_overlay_pop()" style="display: none;">
+	<p id="pedido_efetuado_pop" onclick="back_overlay_pop()">Pedido concluído! Dirija-se ao balcão 3.</p>
+</div>
+<div class="raveUnlocked" id="MENUS">
+	<p id="time" class = "time_unlock"></p>
+	<a class="prev" onclick="plusMenus(-1)">&#10094;</a>
+  	<a class="next" onclick="plusMenus(1)">&#10095;</a>
+	<div class = "menu animate-right"
+		id="SOCIAL"
+		ontouchstart = "socialHandleTouchStart(event)"
+		ontouchmove="socialTouchMove(event)"
+		ontouchend="socialHandleTouchEnd(event)">
+		<img class="menuImagem" src = "icons/social2.png" onclick="changeToSocial()">
+		<p id = "social" class="menu-description">Social</p>
+	</div>
+	<div class = "menu animate-right" id="RESTAURACAO">
+		<img class="menuImagem" src = "icons/restauracao.png" onclick="changeToRest()">
+		<p id = "comida" class="menu-description">Alimentação</p>
+	</div>
+	<div class = "menu animate-right" id="MAPA">
+  		<img class="menuImagem" src = "icons/mapa.png" class="center" onclick="changeToMaps()">
+		<p id = "mapa" class="menu-description">Mapa</p>
+	</div>
+	<div class = "menu animate-right" id="MEDIDORES">
+  		<img class="menuImagem" src = "icons/medidores.png" onclick="changeToMeds()">
+		<p id = "medidores" class="menu-description">Medidores</p>
+	</div>
+	<div class = "menu animate-right" id="DEFINICOES">
+  		<img class="menuImagem" src = "icons/definicoes.png" onclick="changeToSettings()">
+		<p id = "definicoes" class="menu-description">Definições</p>
+	</div>
+	<p id="bolas" style="margin-top: -3px; padding-bottom: 10px; text-align: center; background-color: #6886C1;">&#9899;&#9900;&#9898;&#9898;&#9898;&#9898;</p>
+</div>
+
+	<!--__________________________ SUBMENU SOCIAL __________________________-->
+<div id="SUBMENUSOCIAL" class="raveUnlocked" style="display: none;">
+ 	<p id="time" class = "time_unlock"></p>
+ 	<table id = "SubMenuSocial" class = "table_social">
+ 		<tr>
+ 			<td>
+ 				<img id = "localizar" class = "socialIcons" src  = "icons/find.png" onclick="changeToMaps()"</img>
+			</td>
+ 			<td>
+ 				<img id = "message" class = "socialIcons" src  = "icons/chat.png"</img>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td>
+ 				<img id = "adicionar" class = "socialIcons" src  = "icons/add-user.png" onclick = "changeToAddFriend()"></img>
+			</td>
+ 			<td>
+ 				<img id = "remover" class = "socialIcons" src  = "icons/rm-user.png" onclick = "changeToRemoveFriend()"></img>
+ 			</td>
+ 		</tr>
+ 	</table>
+</div>
+
+<div id = "FRIENDS_ADD" class = "raveUnlocked" style="display: none;" >
+	<p id="time" class = "time_unlock"></p>
+	<p id = "addFriendText"> Encoste o seu iRave ao de um amigo para adicionar </p>
+</div>
+
+<div id = "FRIEND_ADDED" class = "raveUnlocked" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<p id = "friendName"></p>
+	<p id = "friendAdded"> adicionado/a aos amigos! </p>
+	<p class="ok_button" onclick="back()">OK</p>
+</div>
+
+<div id="FRIENDS_REMOVE" class="raveUnlocked dragscrollY" style="display: none; overflow-y: scroll;">
+	<p id="time" class = "time_unlock"></p>
+	<div id = "friends" class="table100 ver5 m-b-110">
+			<table id = "friendsRemove" cellspacing="5" cellpadding="0" style="width: 100%; margin-top: 27px;">
+				<tbody id="friendsRemoveBody" class="table100-body">
+				</tbody>
+			</table>
+	</div>
+</div>
+
+<div id = "FRIENDS_REMOVE_ALERT" class="raveUnlocked" style="background-color: #EF0000; display: none;">
+	<p style="font-size: 16px; font-family: Arial; text-align: center; color: white; margin-top: 10px;">Tem a certeza que pretende remover o amigo?</p>
+	<p class="cancelButtons" style="margin-left: 8px; margin-right: 76px; margin-top: -7px;" onclick = "removeFriend()" >Sim</p>
+	<p class="cancelButtons" style="margin-top: -52px; margin-left: 75px; margin-right: 14px; background-color: red; color: white; padding-right: 6px;" onclick="back()">Não</p>
+</div>
+
+<div id="FRIENDS_LOCATE" class="raveUnlocked dragscrollY" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<div id = "friends" class="table100 ver5 m-b-110">
+			<table id = "friendsLocate" cellspacing="5" cellpadding="0" style="width: 100%; margin-top: 27px; ">
+				<tbody id="friendsLocateBody" class="table100-body">
+				</tbody>
+			</table>
+	</div>
+</div>
+
+<div id="FRIENDS_OFFER" class="raveUnlocked dragscrollY" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<div id = "friends" class="table100 ver5 m-b-110">
+			<table id = "friendsOffer" cellspacing="5" cellpadding="0" style="width: 100%; margin-top: 27px; ">
+				<tbody id="friendsOfferBody" class="table100-body">
+				</tbody>
+			</table>
+	</div>
+	<div id="overlayOffer" class="overlay" style="display: none;" onclick="back_overlayOffer()">
+		<p id="pedido_efetuadoOffer">Pedido efectuado!</p>
+	</div>
+</div>
+
+ <!--__________________________ SUBMENU MEDIDORES __________________________-->
+<div id="SUBMENUMEDS" class="raveUnlocked submenu" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<table id = "SubMenuMeds" class = "table_meds">
+		<tr>
+			<td>
+				<img id = "ritmocard" class = "medsIcons" src  = "icons/ritmocardiaco.png" onclick="openHeartRate()"></img></td>
+			<td>
+				<img id = "glicemia" class = "medsIcons" src  = "icons/diabetes.png" onclick ="openGlicemia()"></img>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<img id = "alcool" class = "medsIcons" src  = "icons/alcool.png" onclick="openAlcohol()"></img></td>
+			<td>
+				<img id = "bloodpressure" class = "medsIcons" src  = "icons/blood-pressure.png" onclick ="openBloodPressure()"></img>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="RESULTS" class="raveUnlocked" style="display: none;">
+<div id="HEARTRATERESULTS" class = "medsFeature" style="display: none;">
+	<div id = "heartRateResults" style="margin-top: 25px;">
+		<p id="titulo_heart" class = "results">Ritmo Cardíaco</p>
+		<table class = "tabela_valores">
+			<tr>
+				<td><p id = "BPM" class = "results"></p></td>
+				<td><p class = "results">BPM</p></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="GLICEMIARESULTS" class = "medsFeature" style="display: none;">
+	<div id = "glicemiaResults" tyle="margin-top: 25px;">
+		<p id="titulo_glicemia" class = "results">Glicemia</p>
+		<table class="tabela_valores">
+			<tr>
+				<td><p id = "mg_dl" class = "results"></p></td>
+				<td><p class = "results">mg/dL</p></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="ALCOHOLRESULTS" class = "medsFeature" style="display: none;">
+	<div id = "alcoholResults" style="margin-top: 25px;">
+		<p id="titulo_alcohol" class = "results">Alcoolemia</p>
+		<table class="tabela_valores">
+			<tr>
+				<td><p id = "g_l" class = "results"></p></td>
+				<td><p class = "results">g/L</p></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="BLOODPRESSSURERESULTS" class = "medsFeature" style="display: none;">
+	<div id = "bloodPressureResults" style="margin-top: 25px;">
+		<p id="titulo_bloodpressure" class = "results">Tensão Arterial</p>
+		<table class = " tabela_valores tabela_pressure">
+			<tr>
+				<td><p class="results_pressure">Sis</td>
+				<td><p id = "bp1" class = "results"></p></td>
+				<td><p style="font-size: 12px; color: white; font-family: Arial;">mm/Hg</p></td>
+			</tr>
+			<tr>
+				<td><p class="results_pressure">Dia</td>
+				<td><p id = "bp2" class = "results"></p></td>
+				<td><p style="font-size: 12px; color: white; font-family: Arial;">mm/Hg</p></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="alert"><img id="alert_img" class="danger"></div>
+</div>
+ <!--__________________________ SUBMENU ALIMENTACAO __________________________-->
+<div id="SUBMENUFOOD" class="raveUnlocked" style="display:none;">
+	<p id="time" class = "time_unlock"></p>
+	<table id = "SubMenuFood" class = "submenu" style="margin-top: 38px;">
+		<tr>
+			<td><img id = "bebidas_img" class = "rest_imgs" src  = "icons/agua.png" onclick="openBebidas()"></img></td>
+			<td><img id = "comidas_img" class = "rest_imgs" src  = "icons/comida.png" onclick ="openComidas()"></img></td>
+		</tr>
+	</table>
+</div>
+<!-- _______________________________BEBIDAS_____________________________-->
+<div id="DRINKS" class="raveUnlocked dragscrollY" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<div id = "drinks" class="table100 ver5 m-b-110">
+		<div style="margin-left: -1px; margin-top: -1px; position: fixed;"><img id = "cancel" src="icons/cancel.png" class="cancelButton" onclick="cancelPurchase_d()"></div>
+		<div style="margin-left: 89px; margin-top: -1px; position: fixed;" ><img id = "shoppingCart" src="icons/cart.png" class="shoppingCart" onclick="showCart_d()"></div>
+		<div class="table100-body">
+		<table id="tabela_drinks" style="margin-left: 4.5px; margin-top: 37px; margin-bottom: 2px; margin-right: 3px; border-collapse: collapse;">
+			<tr class="row100 body" onclick="orderQuantity_d('Água', 0.80)">
+				<td class="cell100 column1 name">Água</td>
+				<td class="cell100 column2 floatPrices">0,80€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_d('Cerveja', 1)">
+				<td class="cell100 column1 name">Cerveja</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_d('Coca-cola', 1.50)">
+				<td class="cell100 column1 name">Coca-cola</td>
+				<td class="cell100 column2 floatPrices">1,50€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_d('Ice-Tea (Pêssego)', 1)">
+				<td class="cell100 column1 name">Ice-Tea (Pêssego)</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_d('Ice-Tea (Manga)', 1)">
+				<td class="cell100 column1 name">Ice-Tea (Manga)</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_d('7 Up', 1)">
+				<td class="cell100 column1 name">7 Up</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
+<div id="ORDER_D" class="raveUnlocked" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<div id="order_d">
+		<p id="produto_d" class="produto"></p>
+		<table class="tabela_order">
+			<tr>
+				<div id="minus_d" class="minus"><img src="icons/minus.png" class="quantityButtons" onclick= "minusOne_d()"></div>
+				<div id="quantidade_d" class="quantidade">0</div>
+				<div id="plus_d" class="plus"><img src="icons/plus.png" class="quantityButtons" onclick="plusOne_d()"></div>
+			</tr>
+		</table>
+	<span class ="ok_button" style="margin-top: -4px;" onclick = "backOrder_d()">OK</span>
+	</div>
+</div>
+<div id="CART_TOTAL_D" class="raveUnlocked dragscrollY" style="display: none;">
+	<div id="checkPurchase_d" class="checkPurchase"><img src="icons/check.png" style="width:34px;" onclick = "openOffers_d()"></div>
+	<div id="restartPurchase_d" class="restartPurchase"><img src="icons/restart.png" style="width:34px;" onclick = "restartPurchases_d()"></div>
+		<div id = "cart_d" class="table100 ver5 m-b-1 cart">
+			<table>
+				<tbody id="listOfPurchases_d" class="table100-body">
+				</tbody>
+			</table>
+		</div>
+		<table id="table_total_d">
+			<tr>
+				<td class="total" style="font-size: 16px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-right: none;">TOTAL:</td>
+				<td class="total" style="font-size: 15px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left: none;" id="total_pagar_d"></td>
+			</tr>
+		</table>
+</div>
+<div id="OFFER_CART" class="raveUnlocked" style="display: none;" >
+	<p id="time" class = "time_unlock"></p>
+	<p id="consumo_proprio" class="offer" onclick="consumo()"
+	   style="margin-top: 30px; margin-bottom: -8px; padding-bottom: 6px; border-bottom: solid white 2px;">Consumo Próprio</p>
+	<p  class="offer" style="margin-top: 13px;" onclick="changeToOfferFriend()">Oferecer a um amigo</p>
+	<div id="overlay" class="overlay" style="display: none;" onclick="back_overlay()">
+		<p id="pedido_efetuado">Pedido efectuado!</p>
+	</div>
+</div>
+<div id = "CANCELPURCHASE_D" class="raveUnlocked" style="background-color: #EF0000; display: none;">
+	<p style="font-size: 16px; font-family: Arial; text-align: center; color: white; margin-top: 10px;">Tem a certeza que pretende cancelar o pedido?</p>
+	<p class="cancelButtons" style="margin-left: 8px; margin-right: 76px; margin-top: -7px;" onclick = "cancelOrder_d()" >Sim</p>
+	<p class="cancelButtons" style="margin-top: -52px; margin-left: 75px; margin-right: 14px;" onclick="back()">Não</p>
+</div>
+<!-- _________________________________COMIDA__________________________ -->
+<div id="FOOD" class="raveUnlocked dragscrollY" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<div id = "foods" class="table100 ver5 m-b-110">
+		<div style="margin-left: -1px; margin-top: -1px; position: fixed;"><img id = "cancel" src="icons/cancel.png" class="cancelButton" onclick="cancelPurchase_f()"></div>
+		<div style="margin-left: 89px; margin-top: -1px; position: fixed;" ><img id = "shoppingCart" src="icons/cart.png" class="shoppingCart" onclick="showCart_f()"></div>
+		<div class="table100-body">
+		<table id="tabela_foods" style="margin-left: 4.5px; margin-top: 37px; margin-bottom: 2px; margin-right: 3px; border-collapse: collapse;">
+			<tr class="row100 body" onclick="orderQuantity_f('Pizza (fatia)', 1.50)">
+				<td class="cell100 column1 name">Pizza (fatia)</td>
+				<td class="cell100 column2 floatPrices">1,50€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Pizza (inteira)', 1.50)">
+				<td class="cell100 column1 name">Pizza (inteira)</td>
+				<td class="cell100 column2 floatPrices">10€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Hamburguer', 5)">
+				<td class="cell100 column1 name">Hamburguer</td>
+				<td class="cell100 column2 floatPrices">5€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Hamburguer vegetariano', 6)">
+				<td class="cell100 column1 name">Hamburguer vegetariano</td>
+				<td class="cell100 column2 floatPrices">6€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Cachorro-quente', 3)">
+				<td class="cell100 column1 name">Cachorro - quente</td>
+				<td class="cell100 column2 floatPrices">3€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Pacote de batatas', 1)">
+				<td class="cell100 column1 name">Pacote de batatas</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Bifana', 2)">
+				<td class="cell100 column1 name">Bifana</td>
+				<td class="cell100 column2 floatPrices">2€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Entremeada', 2)">
+				<td class="cell100 column1 name">Entremeada</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Pita-Shoarama(frango)', 4.50)">
+				<td class="cell100 column1 name">Pita - Shoarma (frango)</td>
+				<td class="cell100 column2 floatPrices">4,50€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Pita-Shoarama(porco)', 5)">
+				<td class="cell100 column1 name">Pita - Shoarma (porco)</td>
+				<td class="cell100 column2 floatPrices">5€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Pita-Shoarama(vaca)', 4.50)">
+				<td class="cell100 column1 name">Pita - Shoarma (vaca)</td>
+				<td class="cell100 column2 floatPrices">4,50€</td>
+			</tr>
+			<tr class="row100 body" onclick="orderQuantity_f('Doce variado', 1)">
+				<td class="cell100 column1 name">Doce variado</td>
+				<td class="cell100 column2 floatPrices">1€</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
+<div id="ORDER_F" class="raveUnlocked" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<div id="order_f">
+		<p id="produto_f" class="produto"></p>
+		<table class="tabela_order">
+			<tr>
+				<div id="minus_f" class="minus"><img src="icons/minus.png" class="quantityButtons" onclick= "minusOne_f()"></div>
+				<div id="quantidade_f" class="quantidade">0</div>
+				<div id="plus_d" class="plus"><img src="icons/plus.png" class="quantityButtons" onclick="plusOne_f()"></div>
+			</tr>
+		</table>
+	<span class ="ok_button" style="margin-top: -4px;" onclick = "backOrder_f()">OK</span>
+	</div>
+</div>
+<div id="CART_TOTAL_F" class="raveUnlocked dragscrollY" style="display: none;">
+	<div id="checkPurchase_f" class="checkPurchase"><img src="icons/check.png" style="width:34px;" onclick = "openOffers_f()"></div>
+	<div id="restartPurchase_f" class="restartPurchase"><img src="icons/restart.png" style="width:34px;" onclick = "restartPurchases_f()"></div>
+		<div id = "cart_f" class="table100 ver5 m-b-1 cart">
+			<table>
+				<tbody id="listOfPurchases_f" class="table100-body">
+				</tbody>
+			</table>
+		</div>
+		<table id="table_total_f">
+			<tr>
+				<td class="total" style="font-size: 16px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-right: none;">TOTAL:</td>
+				<td class="total" style="font-size: 15px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left: none;" id="total_pagar_f"></td>
+			</tr>
+		</table>
+</div>
+<div id = "CANCELPURCHASE_F" class="raveUnlocked" style="background-color: #EF0000; display: none;">
+	<p style="font-size: 16px; font-family: Arial; text-align: center; color: white; margin-top: 10px;">Tem a certeza que pretende cancelar o pedido?</p>
+	<p class="cancelButtons" style="margin-left: 8px; margin-right: 76px; margin-top: -7px;" onclick = "cancelOrder_f()" >Sim</p>
+	<p class="cancelButtons" style="margin-top: -52px; margin-left: 75px; margin-right: 14px;" onclick="back()">Não</p>
+</div>
+<!--__________________________ SUBMENU MAPAS __________________________-->
+<div id = "SUBMENUMAPA" class = "submenu raveUnlocked dragscroll" style="display: none;">
+
+	<div id="overlay_map" style="z-index:2" onclick="off()">
+
+		<div id="Trackers" class="position_overlay animate-zoom" style="z-index:3; background-color:rgba(0, 0, 0, 0); display: none;">
+	 	<table id = "aaa" class = "table_maps" style="margin-left: -4%; margin-top: -9%;">
+ 		<tr>
+ 			<td>
+ 				<img id = "localizar" style="background:#ffffaf; border-style: solid; border-color: black; border-width:1.2px;" class="socialIcons" onclick="findFriend()" src ="icons/aa.png"</img>
+			</td>
+ 			<td>
+ 				<img id = "message" style="background:#ffffaf; border-style: solid; border-color: black; border-width:1.2px;" class="socialIcons" src  = "icons/wc.png" onclick="chooseWC()"></img>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td>
+ 				<img id = "adicionar" style="background:#ffffaf; border-style: solid; border-color: black; border-width:1.2px;" class="socialIcons" src  = "icons/lup.png" onclick = "searchBar()"></img>
+			</td>
+ 			<td>
+ 				<img id = "remover" style="background:#ffffaf; border-style: solid; border-color: black; border-width:1.2px;" class="socialIcons" src  = "icons/stage.png" onclick = "searchStages()"></img>
+ 			</td>
+ 		</tr>
+ 	</table>
+
+	</div>
+
+	</div>
+
+	<img id="target" src="icons/pin.png" style="z-index:1; width:30px" draggable="true" ondragstart="drag(this, event)">
+	<img id="whereIam" style="position:absolute; top: 10px; left: 20px; z-index:1" src='icons/mypin.png' width='38px' height='18px'>
+	<img id="arrow"  src="icons/arrow.png" style="position: absolute; top: 10px; left: 20px;" width="38px" height="18px">
+
+	<img id='festivalImage' src='icons/mm.png' width='350' height='310' usemap="#festivalMap">
+		<div id="line" style="width:1px;background-color:black;position:absolute;">
+			
+		</div>
+	</img>  
+
+	<map name="festivalMap">
+          <area target="" title="PalcoB" shape="rect"   onclick="selectRoom('PalcoB')"
+          ondrop="drop(this, event, 'PalcoB');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="PalcoA" shape="rect"   onclick = "selectRoom('PalcoA')" ondrop="drop(this, event, 'PalcoA');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="PalcoC" shape="rect"   onclick = "selectRoom('PalcoC')" ondrop="drop(this, event, 'PalcoC');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="Entrada" shape="rect"  onclick = "selectRoom('Entrada')" ondrop="drop(this, event, 'Entrada');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="WC1" shape="rect"   onclick = "selectRoom('WC1')" ondrop="drop(this, event, 'WC1');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="WC2" shape="rect"  onclick = "selectRoom('WC2')" ondrop="drop(this, event, 'WC2');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="WC3" shape="rect"  onclick = "selectRoom('WC3')" ondrop="drop(this, event, 'WC3';"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="Bancada1" shape="rect"   onclick = "selectRoom('mainBar')" ondrop="drop(this, event, 'mainBar');"
+          ondragcenter="return false"
+          ondragover="return false">
+          <area target="" title="Bancada2" shape="rect"   onclick = "selectRoom('Bar2')" ondrop="drop(this, event, 'Bar2');"
+          ondragcenter="return false"
+          ondragover="return false">
+        </map>
+
+    <div id="MapOptions" onclick="on()">
+    	<img id="mapopt" src="icons/mapOptions.png" style="cursor:pointer; z-index:1; width:30; position:fixed; margin-top:-212; margin-left:-61;">
+    </div>
+
+</div>
+<div id = "STAGESTOFIND" class="raveUnlocked" style="display: none;">
+	<div class="table100 ver5 m-b-110">
+		<div class="table100-body">
+			<table id="tabela_stages" cellspacing="5" cellpadding="0" style="width: 81%; margin-left: 11px; margin-top: 2.5px; border-spacing: 0 6px;">
+				<tr class="row100 body" onclick="showStage('PalcoA')">
+					<td class="cell100 column1 name">Palco A</td>
+				</tr>
+				<tr class="row100 body" onclick="showStage('PalcoB')">
+					<td class="cell100 column1 name">Palco B</td>
+				</tr>
+				<tr class="row100 body" onclick="showStage('PalcoC')">
+					<td class="cell100 column1 name">Palco C</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id = "BARSTOFIND" class="raveUnlocked" style="display: none;">
+	<div class="table100 ver5 m-b-110">
+		<div class="table100-body">
+			<table id="tabela_stages" style="border-collapse: collapse; width: 100px; margin-left: 13px; margin-top: 24px;">
+				<tr class="row100 body" onclick="showBar('mainBar')">
+					<td class="cell100 column1 name">Bar principal</td>
+				</tr>
+				<tr class="row100 body" onclick="showBar('Bar2')">
+					<td class="cell100 column1 name">Bar secundário</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div id="WC_ESCOLHER" class="raveUnlocked" style="display: none;" >
+	<p id="time" class = "time_unlock"></p>
+	<p id="consumo_proprio" class="offer" onclick="closerWC()"
+	   style="margin-top: 30px; margin-bottom: -8px; padding-bottom: 6px; border-bottom: solid white 2px; font-size: 16px;">WC mais próxima</p>
+	<p  class="offer" style="margin-top: 13px; font-size: 16px;" onclick="emptyWC()">WC com menos filas</p>
+</div>
+
+
+
+<!--_______________________________ SUBMENU DEFINIÇÕES _________________-->
+<div id = "SUBMENUDEFINICOES" class="submenu raveUnlocked dragscrollY" style="display: none;">
+	<p id="time" class = "time_unlock"></p>
+	<p class="definicoes" style="margin-top: 36px; margin-left: -57px; font-size: 16px;">Sons</p>
+	<img src="icons/switchOn.png" class="switches" style="margin-top: -47px; margin-left: 70px;" id="switchSom" onclick="switchSetting(this)">
+
+	<p class="definicoes" style="margin-top: -4px; margin-left: -7px; margin-right: 39px; font-size: 15px;">Impressão digital</p>
+	<img src="icons/switchOn.png" class="switches" style="margin-top: -52px; margin-left: 71px;" id="switchUnlock" onclick="switchSetting(this)">
+
+	<p class="definicoes" style="margin-top: 1px; margin-left: -53px; font-size: 16px;">Pop-ups</p>
+	<img src="icons/switchOn.png" class="switches" style="margin-top: -45px; margin-left: 71px;" id="switchNotifications" onclick="switchSetting(this)">
+
+	<p class="definicoes" style="margin-left: -73px; margin-top: 2px;">Tema </p>
+	<table style="margin-left: 48px; margin-top: -37px;">
+		<tr>
+			<td class="colorPicker" style="background-color: #001a4d;" onclick="updateBackground('#001a4d')"></td>
+			<td class="colorPicker" style="background-color: darkred;"onclick="updateBackground('darkred')"></td>
+			<td class="colorPicker" style="background-color: #333300;" onclick="updateBackground('#333300')"></td>
+		</tr>
+		<tr>
+			<td class="colorPicker" style="background-color: #a49480;"onclick="updateBackground('a49480')"></td>
+			<td class="colorPicker" style="background-color: dimgray;" onclick="updateBackground('dimgray')"></td>
+			<td class="colorPicker" style="background-color: #b36200;" onclick="updateBackground('#b36200')"></td>
+		</tr>
+		<tr>
+			<td class="colorPicker" style="background-color: black;" onclick="updateBackground('black')"></td>
+			<td class="colorPicker" style="background-color: firebrick;" onclick="updateBackground('firebrick')"></td>
+			<td class="colorPicker" style="background-color: indigo;" onclick="updateBackground('indigo')"></td>
+		</tr>
+	</table>
+
+</div>
+
+<!--__________________________________POP_UP DO PEDIDO__________________-->
+<div id="overlay_pop_up" class="overlay" onclick="back_overlay()" style="display: none;">
+	<p id="pedido_efetuado">Pedido concluído! Dirija-se ao balcão 3.</p>
+</div>
+
+<!--__________________________ BOTOES FISICOS __________________________-->
+
+	<div><button class="button" style="width: 79px; margin-left: 35px; margin-top:91px; position: absolute;" onclick="showRequestReady()">Pedido Concluído</button></div>
+
+	<div><button class="button" style="width: 89px; margin-left: 35px; margin-top: 174px; position: absolute;" onclick="highMedsValues()">Valores perigosos nos medidores</div>
+	<div><button class="button" style="width: 89px; margin-left: 140px; margin-top: 174px; position: absolute;" onclick="defaultMedsValues()">Valores default nos medidores</div>
+	<div><button class="button" style="width: 89px; margin-left: 245px; margin-top: 174px; position: absolute;" onclick="normalMedsValues()">Valores normais nos medidores</div>
+
+	<form id="form" onsubmit="return false;" style="margin-left: 35px; margin-top:10px; position: absolute;">
+		<button class="button" type="submit" onclick="addFriend()">Encostar iRave para adicionar</button>
+		<input type="text" id="userInput">
+	</form>
+
+	<div class="raveButtons">
+	<div id = "back_b"><button class="button back" onclick ="back()"></button></div>
+	<div id="lock_b"><button onclick="lock_unlock()" class="button buttonON"></button></div>
+</div>
+
+
+</body>
+
+</html>

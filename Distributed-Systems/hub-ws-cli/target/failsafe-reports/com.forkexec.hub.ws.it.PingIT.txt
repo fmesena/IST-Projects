@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.forkexec.hub.ws.it.PingIT
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.184 sec <<< FAILURE! - in com.forkexec.hub.ws.it.PingIT
+pingEmptyTest(com.forkexec.hub.ws.it.PingIT)  Time elapsed: 1.089 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+pingEmptyTest(com.forkexec.hub.ws.it.PingIT)  Time elapsed: 1.089 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+com.forkexec.hub.ws.it.PingIT  Time elapsed: 1.818 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+

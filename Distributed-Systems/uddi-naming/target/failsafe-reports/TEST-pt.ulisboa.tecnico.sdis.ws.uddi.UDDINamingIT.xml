@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT" time="93.153" tests="4" errors="4" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Utilizador/Desktop/projSD/A51-ForkExec"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="PT"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Utilizador\Desktop\projSD\A51-ForkExec"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\UTILIZ~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:/Users/Utilizador/Desktop/mav/apache-maven-3.6.0/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Java\jdk1.8.0_202\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Utilizador\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Utilizador\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Java\jdk1.8.0_202\bin;C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\Users\Utilizador\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.5\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="C:/Users/Utilizador/Desktop/mav/apache-maven-3.6.0/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:/Users/Utilizador/Desktop/mav/apache-maven-3.6.0/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\Utilizador"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Utilizador"/>
+    <property name="java.class.path" value="C:/Users/Utilizador/Desktop/mav/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Java\jdk1.8.0_202\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="pt"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="java.ext.dirs" value="C:\Java\jdk1.8.0_202\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\Utilizador\Desktop\mav\apache-maven-3.6.0"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testRebindLookup" classname="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT" time="19.869">
+    <error message="lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!" type="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException">pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookup(UDDINamingIT.java:67)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookup(UDDINamingIT.java:67)
+</error>
+    <system-out><![CDATA[Test properties:
+{uddi.pass=aoJbiEHg, uddi.url=http://a51:aoJbiEHg@uddi.sd.rnl.tecnico.ulisboa.pt:9090/, uddi.user=a51}
+]]></system-out>
+  </testcase>
+  <testcase name="testRebindLookupWithWildcard" classname="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT" time="22.495">
+    <error message="lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!" type="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException">pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupWithWildcard(UDDINamingIT.java:79)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupWithWildcard(UDDINamingIT.java:79)
+</error>
+  </testcase>
+  <testcase name="testRebindListRecordsWithWildcard" classname="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT" time="28.722">
+    <error message="listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!" type="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException">pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindListRecordsWithWildcard(UDDINamingIT.java:118)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindListRecordsWithWildcard(UDDINamingIT.java:118)
+</error>
+  </testcase>
+  <testcase name="testRebindLookupRecord" classname="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT" time="22.01">
+    <error message="lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!" type="pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException">pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: lookupRecord() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupRecord(UDDINamingIT.java:92)
+Caused by: java.lang.IllegalArgumentException: Organization name cannot be null!
+	at pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingIT.testRebindLookupRecord(UDDINamingIT.java:92)
+</error>
+  </testcase>
+</testsuite>

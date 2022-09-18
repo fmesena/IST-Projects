@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: com.forkexec.hub.ws.it.LoadAccountIT
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 4.276 sec <<< FAILURE! - in com.forkexec.hub.ws.it.LoadAccountIT
+success(com.forkexec.hub.ws.it.LoadAccountIT)  Time elapsed: 1.193 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+success(com.forkexec.hub.ws.it.LoadAccountIT)  Time elapsed: 1.193 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+badCreditCard(com.forkexec.hub.ws.it.LoadAccountIT)  Time elapsed: 1.019 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+badCreditCard(com.forkexec.hub.ws.it.LoadAccountIT)  Time elapsed: 1.019 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+addTenPoints(com.forkexec.hub.ws.it.LoadAccountIT)  Time elapsed: 1.117 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+addTenPoints(com.forkexec.hub.ws.it.LoadAccountIT)  Time elapsed: 1.117 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
+com.forkexec.hub.ws.it.LoadAccountIT  Time elapsed: 1.73 sec  <<< ERROR!
+com.sun.xml.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: pt.ulisboa.tecnico.sdis.ws.uddi.UDDINamingException: listRecords() IllegalArgumentException Organization name cannot be null! ; Organization name cannot be null! Please see the server log to find more detail regarding exact cause of the failure.
+
